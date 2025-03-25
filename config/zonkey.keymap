@@ -38,6 +38,8 @@
                 &bt_select_profile 5
             >;
         };
+};
+};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
