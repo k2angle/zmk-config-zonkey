@@ -1,39 +1,7 @@
-name: Build ZMK Firmware
-
-on:
-  push:
-    branches:
-      - main
+name: Build ZMK firmware
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Dependencies
-        run: |
-          # 必要な依存関係をインストールするコマンドを追加
-          # 例: sudo apt-get update && sudo apt-get install ...
-
-      - name: Clear Cache
-        run: |
-          # キャッシュをクリアするコマンドを追加
-          # 例: rm -rf ~/.cache/west
-
-      - name: Check empty_file.c
-        run: |
-          # empty_file.cの内容を確認するコマンドを追加
-          # 例: cat /tmp/zmk-config/zephyr/misc/empty_file.c
-
-      - name: Build Firmware
-        run: |
-          west build -s zmk/app -d "/tmp/tmp.build" -b "seeeduino_xiao_ble" -- -DZMK_CONFIG=/tmp/zmk-config/config -DSHIELD="zonkey_R rgbled_adapter" -DZMK_EXTRA_MODULES='/__w/zmk-config-zonkey'
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: firmware
-          path: /tmp/tmp.build/zephyr/seeeduino_xiao_ble.uf2
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    
