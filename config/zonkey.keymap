@@ -24,6 +24,21 @@
         };
     };
 
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp A &kp B &kp C &kp D
+                &bt_select_profile 1
+                &bt_select_profile 2
+                &bt_select_profile 3
+                &bt_select_profile 4
+                &bt_select_profile 5
+            >;
+        };
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
