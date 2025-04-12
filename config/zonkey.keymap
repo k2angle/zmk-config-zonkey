@@ -46,7 +46,7 @@
         mo2: mo2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LBKT>;
+            bindings = <&kp N2>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo6: mo6 {
@@ -149,8 +149,8 @@
         layer_1 {
             bindings = <
 &trans         &trans         &trans        &trans          &trans                                                               &trans        &kp MINUS    &kp EQUAL    &kp BSLH  &kp BKSP
-&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &trans   &trans
-&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &trans
+&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &kp SEMI   &kp LBKT
+&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &kp RBKT
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans        &trans                                            &trans
             >;
 
