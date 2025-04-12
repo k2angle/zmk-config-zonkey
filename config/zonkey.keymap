@@ -154,7 +154,7 @@
 
         layer_1 {
             bindings = <
-&trans         &trans         &trans        &trans          &trans                                                               &trans        &kp MINUS    &kp CARET    &kp BSLH  &kp BKSP
+KC_HANZEN      &trans         &trans        &trans          &trans                                                               &trans        &kp MINUS    &kp CARET    &kp BSLH  &kp BKSP
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &kp SEMI   &kp LBKT
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &kp RBKT
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans        &trans                                            &trans
@@ -163,8 +163,9 @@
             sensor-bindings = <&scroll_down_up>;
         };
 
-        layer_2 {
-            bindings = <
+        jis_layer {
+           label = "JIS";
+           bindings = <
 &kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                 &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                  &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
