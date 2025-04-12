@@ -157,7 +157,7 @@
 
         layer_1 {
             bindings = <
-&kp F1         &kp F2         &kp F3        &kp F4          &kp F5                                                               &kp F6        &kp F7       &kp F8       &kp F9   &kp F10
+&kp F1         &kp F2         &kp F3        &kp F4          &kp F5                                                               &kp F6        &kp MINUS    &kp CARET    &kp INT_YEN   &kp BKSP
 &kp F11        &kp F12        &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &trans   &trans
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &trans
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans        &trans                                            &trans
