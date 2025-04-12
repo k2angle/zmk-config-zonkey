@@ -109,10 +109,10 @@
             bindings = <&kp COLON>, <&kp ASTRK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        moGRAVE: moGRAVE {
+        moAT: moAT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp AT>;
+            bindings = <&kp AT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
