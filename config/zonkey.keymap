@@ -79,7 +79,7 @@
             bindings = <&kp MINUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        moEQUAL: moCARET {
+        moCARET: moCARET {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp CARET>, <&kp TILDE>;
@@ -103,7 +103,7 @@
             bindings = <&kp SEMI>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        moSQT: moCOLON {
+        moCOLON: moCOLON {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp ASTRK>;
