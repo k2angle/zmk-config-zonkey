@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-#define JIS 2
-#define BT 5
+#define JIS 1
+#define BT 3
 #define MOUSE 6
 
 &mt {
@@ -136,6 +136,7 @@
         };
     };
 
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -154,9 +155,9 @@
 
         layer_1 {
             bindings = <
-KC_HANZEN      &trans         &trans        &trans          &trans                                                               &trans        &kp MINUS    &kp CARET    &kp INT_YEN  &kp BKSP
-&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &kp SEMI   &kp LBKT
-&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &kp RBKT
+&kp F1         &kp F2         &kp F3        &kp F4          &kp F5                                                               &kp F6        &kp F7       &kp F8       &kp F9   &kp F10
+&kp F11        &kp F12        &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &trans   &trans
+&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &trans
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans        &trans                                            &trans
             >;
 
