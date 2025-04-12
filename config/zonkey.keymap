@@ -87,10 +87,10 @@
             bindings = <&kp CARET>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        moINT_YEN: moINT3 {
+        moINT3: moINT3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp INT3>, <&kp PIPE>;
+            bindings = <INT3>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moAT: moAT {
