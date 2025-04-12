@@ -155,7 +155,7 @@
 
         layer_1 {
             bindings = <
-&trans         &trans         &trans        &trans          &trans                                                               &trans         &trans         &trans        &trans        &trans
+&trans         &trans         &trans        &trans          &trans                                                               &trans         &trans        &moMINUS      &moCARET       &moINT_YEN
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans         &trans         &trans        &trans        &trans
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans         &trans         &trans        &trans        &trans
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans         &trans                                                    &trans
