@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-#define JIS 1
-#define BT 3
+#define JIS 2
+#define BT 5
 #define MOUSE 6
 
 &mt {
@@ -148,8 +148,8 @@
 
         layer_1 {
             bindings = <
-&kp F1         &kp F2         &kp F3        &kp F4          &kp F5                                                               &kp F6        &kp F7       &kp F8       &kp F9   &kp F10
-&kp F11        &kp F12        &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &trans   &trans
+&trans         &trans         &trans        &trans          &trans                                                               &trans        &kp MINUS    &kp EQUAL    &kp BSLH  &kp BKSP
+&trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans       &trans   &trans
 &trans         &trans         &trans        &trans          &trans          &trans                                &trans         &trans        &trans       &trans        &trans  &trans
 &trans         &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans        &trans                                            &trans
             >;
