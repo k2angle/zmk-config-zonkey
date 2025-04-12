@@ -52,13 +52,13 @@
         mo6: mo6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp EQUAL>;
+            bindings = <&kp N6>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo7: mo7 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp LS(N6)>;
+            bindings = <&kp N7>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo8: mo8 {
