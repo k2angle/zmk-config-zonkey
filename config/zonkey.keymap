@@ -42,31 +42,31 @@
          mo2: mo2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp LBKT>;
+            bindings = <&kp N2>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo6: mo6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp EQUAL>;
+            bindings = <&kp N6>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo7: mo7 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp LS(N6)>;
+            bindings = <&kp N7>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo8: mo8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp LS(SQT)>;
+            bindings = <&kp N8>, <&kp ASTRK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo9: mo9 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp LS(N8)>;
+            bindings = <&kp N9>, <&kp LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mo0: mo0 {
@@ -78,55 +78,55 @@
         moA: moA {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(INT_RO)>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moB: moB {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(MINUS)>, <&kp COLON>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moC: moC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp LS(RBRC)>;
+            bindings = <&kp INT3>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moD: moD {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&kp LS(BSLH)>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moE: moE {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp SQT>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moF: moF {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(N7)>, <&kp LS(N2)>;
+            bindings = <&kp SEMI>, <&kp KP_PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moG: moG {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(LBRC)>, <&kp LS(EQUAL)>;
+            bindings = <&kp APOSTROPHE>, <&kp DQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moH: moH {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(LBRC)>, <&kp LS(EQUAL)>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
          moI: moI {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(LBRC)>, <&kp LS(EQUAL)>;
+            bindings = <&kp BACKSLASH>, <&kp TILDE2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
           scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
@@ -156,8 +156,8 @@
 
         layer_1 {
             bindings = <
-&trans         &trans         &trans        &trans          &trans                                                               &trans         &trans        &moA          &moB          &moC
-&trans      &trans         &trans        &trans          &trans          &trans                                &trans         &trans         &trans         &trans         &moD         &moE
+&kp ESC         &trans         &trans        &trans          &trans                                                               &trans         &trans        &moA          &moB          &moC
+&kp TAB      &trans         &trans        &trans          &trans          &trans                                &trans         &trans         &trans         &trans         &moD         &moE
 &trans         &trans         &trans       &trans          &trans          &trans                                &trans         &trans         &trans         &moF         &moG         &moH
 &mt LCTL ESC      &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans         &trans                                              &moI
             >;
@@ -167,7 +167,7 @@
 
         layer_2 {
             bindings = <
- &trans         &trans        &trans          &trans          &trans                                                         &trans         &trans        &trans          &trans          &trans
+ &trans         &mo2        &trans          &trans          &trans                                                         &mo6         &mo7        &mo8          &mo9          &mo0
 &trans         &trans         &trans        &trans          &trans          &trans                          &trans         &trans         &trans        &trans          &trans          &trans
 &trans         &trans         &trans        &trans          &trans          &trans                          &trans         &trans         &trans        &trans          &trans          &trans
 &trans         &trans         &trans        &lt 6 INT_HENKAN    &lt 2 SPACE   &lt 4 INT_MUHENKAN             &trans        &trans                                                       &trans
