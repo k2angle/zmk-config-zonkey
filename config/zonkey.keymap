@@ -13,6 +13,31 @@
 #define BT 4
 #define MOUSE 6
 
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_BSLH  INT1         // (backslash)
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -90,7 +115,7 @@
         moC: moC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp INT3>, <&kp PIPE>;
+            bindings = <&kp INT3>, <&kp JP_PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         moD: moD {
@@ -120,13 +145,13 @@
         moH: moH {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT>, <&kp RBRC>;
+            bindings = <&kp BACKSLASH>, <&kp TILDE2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
          moI: moI {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp TILDE2>;
+            bindings = <&kp JP_BSLH>, <&kp JP_UNDERSCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
           scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
@@ -156,9 +181,9 @@
 
         layer_1 {
             bindings = <
-&kp ESC         &trans         &trans        &trans          &trans                                                               &trans         &trans        &moA          &moB          &moC
+&kp JP_HANZEN         &trans         &trans        &trans          &trans                                                               &trans         &trans        &moA          &moB          &moC
 &kp TAB      &trans         &trans        &trans          &trans          &trans                                &trans         &trans         &trans         &trans         &moD         &moE
-&trans         &trans         &trans       &trans          &trans          &trans                                &trans         &trans         &trans         &moF         &moG         &moH
+&trans         &trans         &trans       &trans          &trans          &trans                                &kp JP_EISU         &kp JP_KANA         &trans         &moF         &moG         &moH
 &mt LCTL ESC      &trans         &trans        &lt 5 INT_HENKAN    &lt 4 SPACE   &lt 1 INT_MUHENKAN                  &trans         &trans                                              &moI
             >;
 
@@ -167,7 +192,7 @@
 
         layer_2 {
             bindings = <
- &trans         &mo2        &trans          &trans          &trans                                                         &mo6         &mo7        &mo8          &mo9          &mo0
+&kp N1         &mo2        &kp N3          &kp N4          &kp N5                                                         &mo6         &mo7        &mo8          &mo9          &mo0
 &trans         &trans         &trans        &trans          &trans          &trans                          &trans         &trans         &trans        &trans          &trans          &trans
 &trans         &trans         &trans        &trans          &trans          &trans                          &trans         &trans         &trans        &trans          &trans          &trans
 &trans         &trans         &trans        &lt 6 INT_HENKAN    &lt 2 SPACE   &lt 4 INT_MUHENKAN             &trans        &trans                                                       &trans
