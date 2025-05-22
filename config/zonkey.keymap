@@ -112,16 +112,5 @@
 
             sensor-bindings = <&scroll_up_down>;
         };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB2  &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans                              &trans
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
     };
 };
